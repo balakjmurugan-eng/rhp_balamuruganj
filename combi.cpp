@@ -15,7 +15,6 @@ void solve() {
         for (int sh = 0; sh < L; sh++) {
 
             if ((ctr & (1 << sh)) > 0) {
-                // bit is set
                 combi += s[sh];
             }
         }
