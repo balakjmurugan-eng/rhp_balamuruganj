@@ -9,7 +9,6 @@ int main() {
     vector<vector<int>> a(n, vector<int>(m));
     vector<vector<int>> dp(n, vector<int>(m));
 
-    // Input matrix
     for(int i = 0; i < n; i++)
         for(int j = 0; j < m; j++)
             cin >> a[i][j];
@@ -18,7 +17,7 @@ int main() {
             
 
 
-    // DP
+    
     for(int i = 1; i < n; i++) {
         for(int j = 0; j < m; j++) {
             int mx = 0;
@@ -32,7 +31,7 @@ int main() {
         }
     }
 
-    // Print DP table
+    
     cout << "DP Matrix:\n";
     for(int i = 0; i < n; i++) {
         for(int j = 0; j < m; j++)
@@ -40,7 +39,6 @@ int main() {
         cout << endl;
     }
 
-    // Maximum answer
     int ans = 0;
     for(int j = 0; j < m; j++)
         ans = max(ans, dp[n-1][j]);
